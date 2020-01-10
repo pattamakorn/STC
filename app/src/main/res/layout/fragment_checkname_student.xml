@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#b9ada0"
+    android:layout_height="match_parent"
+    tools:context=".checkname_student">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/toppage"
+            android:layout_margin="10dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <TextView
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:fontFamily="@font/mitr_semibold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="เข้าเรียนประจำวัน"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="391dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toppage"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="80dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/layout_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/follow_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/mitr_semibold"
+                            android:text="99/99/9999"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/follow_inclass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/follow_date"
+                            android:layout_alignBottom="@+id/follow_date"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_toEndOf="@+id/follow_date"
+                            android:layout_toRightOf="@+id/follow_date"
+                            android:fontFamily="@font/mitr_semibold"
+                            android:text="เข้าเรียน"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerstdfollow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/layout_top"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="80dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</FrameLayout>

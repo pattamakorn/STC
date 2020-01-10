@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:elevation="50dp"
+    android:layout_marginBottom="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="#6B5338"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:fontFamily="@font/mitr_semibold"
+            android:textColor="#fff"
+            android:id="@+id/namesubject_ttran"
+            android:text="ชื่อนามสกุล"
+            android:textSize="17sp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/score_ttran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/namesubject_ttran"
+            android:layout_toRightOf="@+id/namesubject_ttran"
+            android:fontFamily="@font/mitr_semibold"
+            android:text="100"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/score1_ttran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/score_ttran"
+            android:layout_toRightOf="@+id/score_ttran"
+            android:fontFamily="@font/mitr_semibold"
+            android:text="100"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/score2_ttran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/score1_ttran"
+            android:layout_toRightOf="@+id/score1_ttran"
+            android:fontFamily="@font/mitr_semibold"
+            android:text="100"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/scoresum_ttran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/score2_ttran"
+            android:layout_toRightOf="@+id/score2_ttran"
+            android:fontFamily="@font/mitr_semibold"
+            android:text="100"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

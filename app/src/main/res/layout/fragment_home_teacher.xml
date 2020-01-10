@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#BDBDBD"
+    android:layout_height="match_parent"
+    tools:context=".homeTeacher">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_margin="4dp"
+        app:cardElevation="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp">
+            <RelativeLayout
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:background="@drawable/bgpro">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/teacherProfile"
+                    android:layout_width="110dp"
+                    android:layout_height="105dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="138dp"
+                    android:layout_marginLeft="138dp"
+                    android:layout_marginEnd="147dp"
+                    android:layout_marginRight="147dp"
+                    android:clickable="true"
+                    android:elevation="50dp"
+                    android:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/fullnameteacher"
+                    android:layout_width="231dp"
+                    android:layout_height="26dp"
+                    android:layout_below="@id/teacherProfile"
+                    android:layout_alignStart="@+id/teacherProfile"
+                    android:layout_alignLeft="@+id/teacherProfile"
+                    android:layout_alignEnd="@+id/teacherProfile"
+                    android:layout_alignRight="@+id/teacherProfile"
+                    android:layout_marginStart="-59dp"
+                    android:layout_marginLeft="-59dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="-59dp"
+                    android:layout_marginRight="-59dp"
+                    android:elevation="50dp"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:gravity="center"
+                    android:text="ชื่อ - นามสกุล"
+                    android:textColor="#fff"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/impost"
+                    android:layout_width="20dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="267dp"
+                    android:layout_marginLeft="267dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/postt" />
+
+                <TextView
+                    android:id="@+id/textpost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_alignTop="@+id/impost"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-6dp"
+                    android:layout_toEndOf="@+id/impost"
+                    android:layout_toRightOf="@+id/impost"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:text="โพสต์ข่าวสาร"
+                    android:textColor="#fff" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="180dp"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerrrr"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    tools:context=".timeteacher">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/aa"
+            android:layout_margin="1dp"
+            app:cardCornerRadius="5dp"
+            android:elevation="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/toppagetimeteach">
+
+                <TextView
+                    android:id="@+id/daytt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView"
+                    android:layout_alignStart="@+id/textView"
+                    android:layout_alignLeft="@+id/textView"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:text="สวัสดีวันจันทร์"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/datett"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/daytt"
+                    android:layout_alignStart="@+id/daytt"
+                    android:layout_alignLeft="@+id/daytt"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:text="4/11/2562"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="243dp"
+                    android:layout_marginLeft="243dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:text="ตารางสอนประจำวัน"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bb"
+            android:layout_margin="1dp"
+            app:cardCornerRadius="5dp"
+            android:elevation="30dp"
+            android:layout_below="@+id/aa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/secondtaptimeteach">
+
+
+                <TextView
+                    android:id="@+id/textterm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginLeft="235dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:text="ภาคเรียนที่ 1"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textyear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textterm"
+                    android:layout_alignStart="@+id/textterm"
+                    android:layout_alignLeft="@+id/textterm"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@+id/textterm"
+                    android:layout_toRightOf="@+id/textterm"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:text="ปีการศึกษา 2562"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cc"
+            android:layout_margin="1dp"
+            app:cardCornerRadius="5dp"
+            android:elevation="30dp"
+            android:layout_below="@+id/bb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/bgpro">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/recyclerteachertime"
+                    android:layout_height="match_parent">
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</FrameLayout>

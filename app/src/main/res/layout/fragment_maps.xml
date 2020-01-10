@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".maps">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/toppagegps"
+            android:background="@drawable/toppagegpst"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/mitr_semibold"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:id="@+id/classstd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ชั้นมัธยมศึกษาปีที่"/>
+
+            <TextView
+                android:id="@+id/classstdnclass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/classstd"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/classstd"
+                android:layout_toRightOf="@+id/classstd"
+                android:fontFamily="@font/mitr_semibold"
+                android:text="4/1"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/nameparentgps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/classstdnclass"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/classstdnclass"
+                android:layout_toRightOf="@+id/classstdnclass"
+                android:fontFamily="@font/mitr_semibold"
+                android:text="ชื่อนามสกุลผู้ปกครอง"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/classstd"
+                android:fontFamily="@font/mitr_semibold"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:id="@+id/namestdgps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ชื่อ - นามสกุล"/>
+
+
+        </RelativeLayout>
+        <fragment
+            android:layout_below="@+id/toppagegps"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:src="@drawable/mapa" />
+
+    </RelativeLayout>
+
+</FrameLayout>

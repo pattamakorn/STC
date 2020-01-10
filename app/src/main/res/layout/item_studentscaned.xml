@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:elevation="10dp"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/check"
+            android:layout_width="49dp"
+            android:layout_height="29dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/check" />
+
+        <TextView
+            android:fontFamily="@font/mitr_semibold"
+            android:textColor="#000"
+            android:id="@+id/stidname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/check"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/check"
+            android:layout_toRightOf="@+id/check"
+            android:text="ชื่อ - สกุล" />
+
+        <TextView
+            android:fontFamily="@font/mitr_semibold"
+            android:textColor="#000"
+            android:id="@+id/timecheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stidname"
+            android:layout_alignStart="@+id/stidname"
+            android:layout_alignLeft="@+id/stidname"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="1dp"
+            android:text="เวลาเช็คชื่อ" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

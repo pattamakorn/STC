@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#d08106"
+    tools:context=".homeparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/layoutprofile"
+            android:gravity="center"
+            android:background="@drawable/bgpro"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/parentProfile"
+                android:layout_width="110dp"
+                android:layout_height="105dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="141dp"
+                android:layout_marginLeft="141dp"
+                android:layout_marginEnd="141dp"
+                android:layout_marginRight="141dp"
+                android:clickable="true"
+                android:elevation="50dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:fontFamily="@font/mitr_semibold"
+                android:id="@+id/parentname"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_below="@+id/parentProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#fff"
+                android:text="ชื่อ - นามสกุล"/>
+
+            <ImageView
+                android:id="@+id/moredetail"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/detailll" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#f7931e"
+            android:layout_below="@+id/layoutprofile"
+            android:layout_marginBottom="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:id="@+id/recyclernewsparent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</FrameLayout>

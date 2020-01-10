@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FF6E40"
+    android:layout_height="match_parent"
+    tools:context=".transcriptparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/layoutparent_topgrade"
+            android:background="@drawable/topgradeparent"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="เลือกชื่อนักเรียนในปกครอง"
+                android:fontFamily="@font/mitr_semibold"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/shograde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:fontFamily="@font/mitr_semibold"
+                android:text="เกรดเฉลี่ยรวม"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/mygrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shograde"
+                android:layout_alignStart="@+id/shograde"
+                android:layout_alignLeft="@+id/shograde"
+                android:layout_alignEnd="@+id/shograde"
+                android:layout_alignRight="@+id/shograde"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginRight="18dp"
+                android:fontFamily="@font/mitr_semibold"
+                android:text="3.99"
+                android:textColor="#098712"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/shosumgrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mygrade"
+                android:layout_alignStart="@+id/shograde"
+                android:layout_alignLeft="@+id/shograde"
+                android:layout_alignEnd="@+id/shograde"
+                android:layout_alignRight="@+id/shograde"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:fontFamily="@font/mitr_semibold"
+                android:text="หน่วยกิตสะสม"
+                android:textColor="#000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/shosumgrade"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/shosumgrade"
+                android:layout_toRightOf="@+id/shosumgrade"
+                android:fontFamily="@font/mitr_semibold"
+                android:text="900"
+                android:textColor="#098712"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#f7931e"
+            android:layout_below="@+id/layoutparent_topgrade"
+            android:layout_marginBottom="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:id="@+id/recyclertranscriptparent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</FrameLayout>

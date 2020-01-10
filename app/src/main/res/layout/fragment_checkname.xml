@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f7aa33"
+    tools:context=".checkname">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="80dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="@font/mitr_semibold"
+                android:gravity="center"
+                android:id="@+id/liststudentday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="รายชื่อนักเรียนที่มาวันนี้"/>
+<!--            <TextView-->
+<!--                android:layout_below="@+id/liststudentday"-->
+<!--                android:fontFamily="@font/mitr_semibold"-->
+<!--                android:id="@+id/mysub"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text="วิชาคอมพิวเตอร์"-->
+<!--                android:textColor="#000"-->
+<!--                android:textSize="15sp" />-->
+            <TextView
+                android:id="@+id/showqrnowday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/liststudentday"
+                android:fontFamily="@font/mitr_semibold"
+                android:gravity="center"
+                android:text="ไม่พบคีย์เวิร์ดของคุณ"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/layoutselectclass"
+                android:gravity="center"
+                android:layout_below="@+id/showqrnowday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/classroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:text="ห้องเรียน"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/selectclass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/classroom"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@+id/classroom"
+                    android:layout_toRightOf="@+id/classroom"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:text="4/1"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:background="#F5F3F3"
+                android:layout_margin="10dp"
+                android:id="@+id/recyclertcheckscan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layoutselectclass"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

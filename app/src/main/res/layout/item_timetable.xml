@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="20dp"
+    android:background="#000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/showtimetable"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:layout_marginLeft="88dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/mitr_semibold"
+            android:text="อ3001"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:fontFamily="@font/mitr_semibold"
+            android:textColor="#000"
+            android:id="@+id/name_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="ภาษาอังกฤษ"
+            app:layout_constraintStart_toEndOf="@+id/id_subject"
+            app:layout_constraintTop_toTopOf="@+id/id_subject"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:fontFamily="@font/mitr_semibold"
+            android:textColor="#000"
+            android:id="@+id/teacher_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="ธงชัย สุเรรัมย์"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/id_subject"
+            app:layout_constraintTop_toBottomOf="@+id/id_subject"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:fontFamily="@font/mitr_semibold"
+            android:textColor="#000"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="9999"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/teacher_subject"
+            app:layout_constraintTop_toBottomOf="@+id/teacher_subject"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:fontFamily="@font/mitr_semibold"
+            android:textColor="#000"
+            android:id="@+id/timetablesubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="99:99 - 99:99"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

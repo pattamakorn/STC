@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#BDBDBD"
+    tools:context=".transcript">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            android:elevation="30dp"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/toppagetranscript"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <RelativeLayout
+                android:background="@drawable/tabgrade"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/topgrad"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:text="เกรดเฉลี่ยรวม"
+                    android:fontFamily="@font/mitr_semibold"/>
+
+                <TextView
+                    android:id="@+id/sumgrade"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/topgrad"
+                    android:layout_alignEnd="@+id/topgrad"
+                    android:layout_alignRight="@+id/topgrad"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12.5dp"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginEnd="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:gravity="center"
+                    android:text="9.99"
+                    android:textColor="#39741D"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/topcredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sumgrade"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:gravity="center"
+                    android:text="หน่วยกิตสะสม"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/sumcredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sumgrade"
+                    android:layout_alignBottom="@+id/topcredit"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="-17dp"
+                    android:layout_marginBottom="-9dp"
+                    android:layout_toEndOf="@+id/topcredit"
+                    android:layout_toRightOf="@+id/topcredit"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:gravity="center"
+                    android:text="9.99"
+                    android:textColor="#39741D"
+                    android:textSize="25sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/toppagetranscript"
+            android:layout_marginBottom="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="10dp"
+                android:id="@+id/recyclertranscript"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</FrameLayout>
