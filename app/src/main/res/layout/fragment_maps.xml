@@ -13,16 +13,18 @@
             android:background="@drawable/toppagegpst"
             android:layout_width="match_parent"
             android:layout_height="100dp">
+
             <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/mitr_semibold"
-                android:textColor="#fff"
-                android:textSize="15sp"
                 android:id="@+id/classstd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ชั้นมัธยมศึกษาปีที่"/>
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mitr_semibold"
+                android:text="ชั้นมัธยมศึกษาปีที่"
+                android:textColor="#fff"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/classstdnclass"
@@ -43,28 +45,28 @@
                 android:id="@+id/nameparentgps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/classstdnclass"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="0dp"
-                android:layout_toEndOf="@+id/classstdnclass"
-                android:layout_toRightOf="@+id/classstdnclass"
+                android:layout_below="@+id/namestdgps"
+                android:layout_alignStart="@+id/namestdgps"
+                android:layout_alignLeft="@+id/namestdgps"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
                 android:fontFamily="@font/mitr_semibold"
                 android:text="ชื่อนามสกุลผู้ปกครอง"
                 android:textColor="#fff"
                 android:textSize="15sp" />
 
             <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/classstd"
-                android:fontFamily="@font/mitr_semibold"
-                android:textColor="#fff"
-                android:textSize="15sp"
                 android:id="@+id/namestdgps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ชื่อ - นามสกุล"/>
+                android:layout_below="@+id/classstd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/mitr_semibold"
+                android:text="ชื่อ - นามสกุล"
+                android:textColor="#fff"
+                android:textSize="15sp" />
 
 
         </RelativeLayout>
@@ -77,7 +79,7 @@
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="80dp"/>
+            android:layout_marginBottom="30dp"/>
 
         <ImageView
             android:layout_marginTop="10dp"

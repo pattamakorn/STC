@@ -22,6 +22,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -31,6 +32,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.Glide;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -60,6 +62,8 @@ public class maps extends Fragment implements OnMapReadyCallback {
     LocationListener locationListener;
     public String slatitude,slongitude;
 
+    private TextView classstdnclass,namestdgps,nameparentgps;
+
     View view;
 
 
@@ -76,6 +80,13 @@ public class maps extends Fragment implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        classstdnclass = view.findViewById(R.id.classstdnclass);
+        namestdgps = view.findViewById(R.id.namestdgps);
+        nameparentgps = view.findViewById(R.id.nameparentgps);
+
+        loadprofile();
+
 
         locationManager = (LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(getContext(),
@@ -109,8 +120,8 @@ public class maps extends Fragment implements OnMapReadyCallback {
                     }
                     slatitude = String.valueOf(latitude);
                     slongitude = String.valueOf(longitude);
-                    Toast.makeText(getContext(), "Latitude: "+slatitude
-                            +"\nLongtitude: "+slongitude, Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getContext(), "Latitude: "+slatitude
+//                            +"\nLongtitude: "+slongitude, Toast.LENGTH_SHORT).show();
                     updatetrack();
 
 
@@ -268,6 +279,48 @@ public class maps extends Fragment implements OnMapReadyCallback {
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1, 1, locationListener);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 1, locationListener);
     }
+
+    public void loadprofile(){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                "http://203.154.83.137/StudentAttendent/maplayout.php", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray array = new JSONArray(response);
+                    for (int i = 0; i < array.length(); i++) {
+                        JSONObject posts = array.getJSONObject(i);
+                        String classr = posts.getString("classs");
+                        String fstdname = posts.getString("fname")+" "+posts.getString("lname");
+                        String fparname = posts.getString("pfname")+" "+posts.getString("plname");
+                        classstdnclass.setText(classr);
+                        namestdgps.setText("ชื่อ นามสกุล "+fstdname);
+                        nameparentgps.setText("ผู้ปกครอง "+fparname);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                    }
+
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                SharedPreferences sp = (getActivity()).getSharedPreferences(login.MyPREFERENCES, Context.MODE_PRIVATE);
+                String ids = sp.getString("IdKey","ผู้ปกครอง");
+                params.put("myid",ids);
+                return params;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue.add(stringRequest);
+    }
+
 }
 
 

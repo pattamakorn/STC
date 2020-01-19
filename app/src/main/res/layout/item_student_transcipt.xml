@@ -11,7 +11,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="100dp"
         android:background="@drawable/grade">
 
         <TextView
@@ -23,7 +23,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="62dp"
             android:layout_marginLeft="62dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="70dp"
             android:fontFamily="@font/mitr_semibold"
             android:text="TextView"
             android:textColor="#fff"
@@ -38,7 +38,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="40dp"
             android:fontFamily="@font/mitr_semibold"
             android:text="TextView"
             android:textColor="#fff"
@@ -48,12 +48,12 @@
             android:id="@+id/gradeterm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/gradetermyear"
+            android:layout_alignLeft="@+id/gradetermyear"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="80dp"
-            android:layout_marginRight="80dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="3dp"
             android:fontFamily="@font/mitr_semibold"
             android:text="TextView"
             android:textColor="#fff"

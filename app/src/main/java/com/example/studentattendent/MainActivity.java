@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void buildLocationRequest() {
         locationRequest = new LocationRequest();
-        ;locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         locationRequest.setInterval(5000);
         locationRequest.setFastestInterval(3000);
         locationRequest.setSmallestDisplacement(10f);

@@ -21,12 +21,12 @@ public class bgservice extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "Service destroyed by user.", Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, "Service destroyed by user.", Toast.LENGTH_LONG).show();
     }
     public void test(){
         int a = 5;
         int b = 10;
         int c = a+b;
-        Toast.makeText(this, "Num Test="+String.valueOf(c), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Num Test="+String.valueOf(c), Toast.LENGTH_SHORT).show();
     }
 }

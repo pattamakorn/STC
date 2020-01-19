@@ -185,6 +185,30 @@ public class login extends AppCompatActivity {
             }
         }
 
+        if (ContextCompat.checkSelfPermission(login.this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+            if (ActivityCompat.shouldShowRequestPermissionRationale(login.this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)){
+                ActivityCompat.requestPermissions(login.this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
+            }else{
+                ActivityCompat.requestPermissions(login.this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
+            }
+        }
+
+        if (ContextCompat.checkSelfPermission(login.this,
+                Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+            if (ActivityCompat.shouldShowRequestPermissionRationale(login.this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE)){
+                ActivityCompat.requestPermissions(login.this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 2);
+            }else{
+                ActivityCompat.requestPermissions(login.this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 2);
+            }
+        }
+
         }
         @Override
         public void onRequestPermissionsResult(int requestCode, String[] permissions,
@@ -194,7 +218,7 @@ public class login extends AppCompatActivity {
                     if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                         if (ContextCompat.checkSelfPermission(login.this,
                                 Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_GRANTED){
-                            Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
                         }
                     }else{
                         android.os.Process.killProcess(android.os.Process.myPid());
@@ -205,7 +229,27 @@ public class login extends AppCompatActivity {
                     if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                         if (ContextCompat.checkSelfPermission(login.this,
                                 Manifest.permission.CAMERA)==PackageManager.PERMISSION_GRANTED){
-                            Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                        }
+                    }else{
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                    }
+                }
+                case 3:{
+                    if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                        if (ContextCompat.checkSelfPermission(login.this,
+                                Manifest.permission.READ_EXTERNAL_STORAGE)==PackageManager.PERMISSION_GRANTED){
+                            //Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                        }
+                    }else{
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                    }
+                }
+                case 4:{
+                    if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                        if (ContextCompat.checkSelfPermission(login.this,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE)==PackageManager.PERMISSION_GRANTED){
+                            //Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
                         }
                     }else{
                         android.os.Process.killProcess(android.os.Process.myPid());

@@ -25,12 +25,12 @@ public class MyLocationService extends BroadcastReceiver {
                     Location location = result.getLastLocation();
 
                     try{
-                        Toast.makeText(context,"sadsdsad",Toast.LENGTH_LONG).show();
+//                        Toast.makeText(context,"sadsdsad",Toast.LENGTH_LONG).show();
                      MainActivity.getInstance().updatelocation(String.valueOf(location.getLongitude()),String.valueOf(location.getLatitude()));
                         Log.d("asdsad","asdadasda");
                     }catch (Exception ex){
                         Log.d("asdsad","asdadasda");
-                        Toast.makeText(context,"asdasdasdas",Toast.LENGTH_LONG).show();
+//                        Toast.makeText(context,"asdasdasdas",Toast.LENGTH_LONG).show();
                         MainActivity.getInstance().updatelocation(String.valueOf(location.getLongitude()),String.valueOf(location.getLatitude()));
                     }
                 }
