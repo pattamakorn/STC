@@ -28,4 +28,8 @@ public class gpsparent extends Fragment {
         return inflater.inflate(R.layout.fragment_gpsparent, container, false);
     }
 
+
+
+
+
 }

@@ -1,10 +1,14 @@
 package com.example.studentattendent;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
@@ -41,6 +45,7 @@ public class login extends AppCompatActivity {
     public static final String mFullname = "fullnameKey";
     public static final String mrole = "roleKey";
     SharedPreferences sharedpreferences;
+    private MainActivity mainActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +57,9 @@ public class login extends AppCompatActivity {
         }
 
 
-        setLocale("th");
 
+        setLocale("th");
+        CheckPermission();
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         String showidpre = sharedpreferences.getString("roleKey","No ID");
         if (showidpre.equals("Student")){
@@ -155,5 +161,57 @@ public class login extends AppCompatActivity {
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
     }
+    private void CheckPermission(){
+            if (ContextCompat.checkSelfPermission(login.this,
+                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                if (ActivityCompat.shouldShowRequestPermissionRationale(login.this,
+                        Manifest.permission.ACCESS_FINE_LOCATION)){
+                    ActivityCompat.requestPermissions(login.this,
+                            new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+                }else{
+                    ActivityCompat.requestPermissions(login.this,
+                            new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+                }
+            }
+        if (ContextCompat.checkSelfPermission(login.this,
+                Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+            if (ActivityCompat.shouldShowRequestPermissionRationale(login.this,
+                    Manifest.permission.CAMERA)){
+                ActivityCompat.requestPermissions(login.this,
+                        new String[]{Manifest.permission.CAMERA}, 2);
+            }else{
+                ActivityCompat.requestPermissions(login.this,
+                        new String[]{Manifest.permission.CAMERA}, 2);
+            }
+        }
+
+        }
+        @Override
+        public void onRequestPermissionsResult(int requestCode, String[] permissions,
+        int[] grantResults){
+            switch (requestCode){
+                case 1: {
+                    if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                        if (ContextCompat.checkSelfPermission(login.this,
+                                Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_GRANTED){
+                            Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                        }
+                    }else{
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                    }
+
+                }
+                case 2:{
+                    if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                        if (ContextCompat.checkSelfPermission(login.this,
+                                Manifest.permission.CAMERA)==PackageManager.PERMISSION_GRANTED){
+                            Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                        }
+                    }else{
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                    }
+                }
+            }
+        }
 
 }

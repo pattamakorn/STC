@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -23,28 +25,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <service android:name = ".bgservice"/>
-        <activity android:name=".studentmaps"></activity>
+        <receiver
+            android:name=".MyLocationService"></receiver>
+        <service android:name=".bgservice" />
+
+        <activity android:name=".studentmaps" />
         <activity android:name=".scanning" />
         <activity android:name=".ParentActivity" />
         <activity android:name=".TeacherActivity" />
         <activity
             android:name=".startapplication"
-            android:theme="@style/AppThemeNobar">
-        </activity>
+            android:theme="@style/AppThemeNobar" />
         <activity
             android:name=".login"
-            android:theme="@style/AppThemeNobar" >
+            android:theme="@style/AppThemeNobar">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

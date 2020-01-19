@@ -215,5 +215,60 @@ public class maps extends Fragment implements OnMapReadyCallback {
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
     }
+    public void LoadMap(){
+
+
+        locationManager = (LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(getContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(getActivity(), new String[]
+                            {Manifest.permission.ACCESS_FINE_LOCATION},
+                    REQUEST_LOCATION_PERMISSION);
+        }
+        locationListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+                double latitude = location.getLatitude();
+                double longitude = location.getLongitude();
+                //get the location name from latitude and longitude
+                Geocoder geocoder = new Geocoder(getContext());
+                try {
+                    List<Address> addresses =
+                            geocoder.getFromLocation(latitude, longitude, 1);
+                    String result = addresses.get(0).getLocality()+":";
+                    result += addresses.get(0).getCountryName();
+                    LatLng latLng = new LatLng(latitude, longitude);
+                    slatitude = String.valueOf(latitude);
+                    slongitude = String.valueOf(longitude);
+                    updatetrack();
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String provider) {
+
+            }
+
+            @Override
+            public void onProviderDisabled(String provider) {
+
+            }
+        };
+
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1, 1, locationListener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 1, locationListener);
+    }
 }
+
+
 
