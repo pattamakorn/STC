@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class studentcheckAdapter extends RecyclerView.Adapter<studentcheckAdapter.MyViewHolder> {
@@ -62,7 +64,7 @@ public class studentcheckAdapter extends RecyclerView.Adapter<studentcheckAdapte
 
         holder.follwsub.setText(mfollow.get(position).getFollowidsub()+" "+mfollow.get(position).getFollownamesub());
         holder.follwteach.setText(mfollow.get(position).getFollownameteach());
-        holder.follwclass.setText("ห้องเรียน "+mfollow.get(position).getFollowclassroom());
+
 
     }
 

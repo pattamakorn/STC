@@ -25,8 +25,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <receiver
-            android:name=".MyLocationService"></receiver>
+        <activity android:name=".show_transcript_parent"></activity>
+
+        <receiver android:name=".MyLocationService" />
+
         <service android:name=".bgservice" />
 
         <activity android:name=".studentmaps" />

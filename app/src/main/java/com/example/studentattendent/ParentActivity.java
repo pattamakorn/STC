@@ -30,7 +30,7 @@ public class ParentActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,new checknamesparent()).commit();
                     return true;
                 case R.id.transcriptparent:
-                    getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,new transcriptparent()).commit();
+                    getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,new selectSTDtrans()).commit();
                     return true;
                 case R.id.gpsparent:
                     getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,new gpsparent()).commit();

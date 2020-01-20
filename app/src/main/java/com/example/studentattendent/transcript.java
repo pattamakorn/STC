@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,9 +51,12 @@ public class transcript extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(GradestudentAdapter);
 
+        Bundle bundle=getArguments();
 
-
-        return v;
+        String myidtran = bundle.getString("Myidstd");
+        String mynametran = bundle.getString("Mynamestd");
+        Toast.makeText(getActivity(), myidtran+","+mynametran, Toast.LENGTH_SHORT).show();
+       return v;
     }
 
     @Override
