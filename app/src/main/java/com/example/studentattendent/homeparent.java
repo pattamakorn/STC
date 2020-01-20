@@ -124,7 +124,7 @@ public class homeparent extends Fragment {
                 Map<String,String> params = new HashMap<>();
                 SharedPreferences sp = getActivity().getSharedPreferences(login.MyPREFERENCES, Context.MODE_PRIVATE);
                 String mid = sp.getString("IdKey","No ID");
-                params.put("user",mid);
+                params.put("id",mid);
                 return params;
             }
         };

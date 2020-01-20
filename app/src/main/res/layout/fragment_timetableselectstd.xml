@@ -3,11 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_gravity="center"
     android:background="@drawable/bg"
     android:layout_marginBottom="22dp"
-    tools:context=".selectSTDtrans">
+    tools:context=".timetableselectstd">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,7 +14,7 @@
         <RelativeLayout
             android:background="@drawable/bgpro"
             android:gravity="center"
-            android:id="@+id/toppagelayout"
+            android:id="@+id/toppagelayoutsetime"
             android:layout_width="match_parent"
             android:layout_height="100dp">
 
@@ -33,10 +31,10 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_below="@+id/toppagelayout"
+            android:layout_below="@+id/toppagelayoutsetime"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:id="@+id/recyclerselectstdtrans"
+            android:id="@+id/recyclerselectstdttime"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"

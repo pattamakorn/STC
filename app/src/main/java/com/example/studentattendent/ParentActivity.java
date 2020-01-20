@@ -24,7 +24,7 @@ public class ParentActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,new homeparent()).commit();
                     return true;
                 case R.id.timetableparent:
-                    getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,new timetableparent()).commit();
+                    getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,new timetableselectstd()).commit();
                     return true;
                 case R.id.checknamesparent:
                     getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,new checknamesparent()).commit();
